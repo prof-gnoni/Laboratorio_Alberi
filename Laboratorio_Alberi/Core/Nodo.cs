@@ -1,12 +1,12 @@
 ﻿namespace Laboratorio_Alberi.Core
 {
-    public class Nodo
+    public class Nodo<T>
     {
-        public string Valore { get; set; }
-        public Nodo Sinistro { get; set; }
-        public Nodo Destro { get; set; }
+        public T Valore { get; set; }
+        public Nodo<T> Sinistro { get; set; }
+        public Nodo<T> Destro { get; set; }
 
-        public Nodo(string valore)
+        public Nodo(T valore)
         {
             Valore = valore;
             Sinistro = null;

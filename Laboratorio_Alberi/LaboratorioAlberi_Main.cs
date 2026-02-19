@@ -66,12 +66,12 @@ namespace Laboratorio_Alberi
             Console.ResetColor();
             demo.VisitaRicorsiva(demo.Radice);
 
-            Console.WriteLine("\n\n------------------------------------");
+            //Console.WriteLine("\n\n------------------------------------");
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("--- VISITA ITERATIVA (Stack Esplicito) ---");
-            Console.ResetColor();
-            demo.VisitaIterativa();
+            //Console.ForegroundColor = ConsoleColor.Green;
+            //Console.WriteLine("--- VISITA ITERATIVA (Stack Esplicito) ---");
+            //Console.ResetColor();
+            //demo.VisitaIterativa();
         }
 
         static void EseguiDemoFileSystem()

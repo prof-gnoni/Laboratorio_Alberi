@@ -8,21 +8,21 @@ namespace Laboratorio_Alberi.Demos
         // Simuliamo che il "Valore" del nodo sia il nome del file/cartella
         // E aggiungiamo una logica fittizia per il peso
 
-        public Nodo RootFolder { get; private set; }
+        public Nodo<string> RootFolder { get; private set; }
 
         public DemoFileSystem()
         {
-            RootFolder = new Nodo("C:");
-            RootFolder.Sinistro = new Nodo("Programmi");
-            RootFolder.Destro = new Nodo("Utenti");
+            RootFolder = new Nodo<string>("C:");
+            RootFolder.Sinistro = new Nodo<string>("Programmi");
+            RootFolder.Destro = new Nodo<string>("Utenti");
 
-            RootFolder.Sinistro.Sinistro = new Nodo("Minecraft"); // 100MB
-            RootFolder.Destro.Sinistro = new Nodo("Documenti");   // 50MB
-            RootFolder.Destro.Destro = new Nodo("Desktop");       // 20MB
+            RootFolder.Sinistro.Sinistro = new Nodo<string>("Minecraft"); // 100MB
+            RootFolder.Destro.Sinistro = new Nodo<string>("Documenti");   // 50MB
+            RootFolder.Destro.Destro = new Nodo<string>("Desktop");       // 20MB
         }
 
         // Calcola la dimensione totale simulata (Post-Order Traversal)
-        public int CalcolaDimensione(Nodo cartella)
+        public int CalcolaDimensione(Nodo<string> cartella)
         {
             if (cartella == null) return 0;
 
